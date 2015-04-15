@@ -1,0 +1,30 @@
+<h2>Mine spor</h2>
+<div>
+    <ul class="Menu">
+        <li id="login">
+            <p>
+                Logg inn med RunKeeper for å liste opp dine aktiviteter.
+            </p>
+            <a id="rk_login-blue-black" class="rk_webButtonWithText200" href="{{loginUrl}}" title="Login with RunKeeper, powered by the Health Graph"></a>
+        </li>
+        <li id="logout">
+            <a id="btnLogoutRunkeeper" href="#" class="MenuItem">Logg ut</a>
+        </li>
+        <li>
+            <button type="button" ng-click="togglePanoramio()" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Panoramio
+            </button>
+
+            <button type="button" ng-click="toggleSlope()" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Helning
+            </button>
+
+            <button type="button" ng-click="toggleCaution()" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">
+                Aktsomhet
+            </button>
+        </li>
+    </ul>
+</div>
+<div id="routeList">
+
+</div>

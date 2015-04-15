@@ -1,0 +1,54 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+
+    <!--
+        Need DI a message into controller, so auto component scan is disabled,
+        to avoid double create the movieController bean.
+                Only controller need this hack.
+    -->
+    <context:component-scan base-package="no.nb.googleday.bjornadal" />
+    <mvc:annotation-driven />
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix">
+            <value>/pages/</value>
+        </property>
+        <property name="suffix">
+            <value>.jsp</value>
+        </property>
+    </bean>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+        <!--<property name="messageConverters">-->
+            <!--<list>-->
+                <!--<bean class = "org.springframework.http.converter.StringHttpMessageConverter">-->
+                    <!--<property name = "supportedMediaTypes">-->
+                        <!--<list>-->
+                            <!--<value>text/plain;charset=UTF-8</value>-->
+                            <!--<value>application/xml;charset=UTF-8</value>-->
+                            <!--<value>application/json;charset=UTF-8</value>-->
+                        <!--</list>-->
+                    <!--</property>-->
+                <!--</bean>-->
+                <!--<bean class="org.springframework.http.converter.xml.SourceHttpMessageConverter"/>-->
+                <!--<bean class="org.springframework.http.converter.FormHttpMessageConverter" >-->
+                    <!--<property name="charset" value="UTF-8" />-->
+                <!--</bean>-->
+                <!--<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter" />-->
+            <!--</list>-->
+        <!--</property>-->
+    </bean>
+
+    <mvc:resources mapping="/resources/**" location="/resources/" />
+    <mvc:resources mapping="/static/**" location="/static/" />
+
+</beans>
