@@ -15,7 +15,7 @@
         to avoid double create the movieController bean.
                 Only controller need this hack.
     -->
-    <context:component-scan base-package="no.nb.googleday.bjornadal" />
+    <context:component-scan base-package="no.bjornadal.mytracks" />
     <mvc:annotation-driven />
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

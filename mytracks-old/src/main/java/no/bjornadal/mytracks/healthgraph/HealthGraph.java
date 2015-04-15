@@ -24,13 +24,13 @@ public class HealthGraph {
 
     private static final Logger log = Logger.getLogger(HealthGraph.class.getName());
 
-    public static final String CLIENT_ID = "ba572e63f74b42c1a21e4206b83f3dd3";
-    public static final String CLIENT_SECRET = "b5d1ab61f8eb4afab706423211521a4e";
+    public static final String CLIENT_ID = "";
+    public static final String CLIENT_SECRET = "";
     public static final String AUTH_URL = "https://runkeeper.com/apps/authorize";
     public static final String ACCESS_URL = "https://runkeeper.com/apps/token";
     public static final String REDIRECT_URI = "/rest/login";
     public static final String REST_URL = "https://api.runkeeper.com";
-    public static final String AUTH_CODE = "75fe669b6c1b4486ae35ffb15768ed43";
+    public static final String AUTH_CODE = "";
 
     public String getAccessToken(String redirectUri, String code) {
         String accessToken = "";
