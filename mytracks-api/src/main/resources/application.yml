@@ -1,0 +1,6 @@
+spring:
+    application:
+        name: mytracks-api
+
+server:
+    port: 9001
