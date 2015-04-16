@@ -6,7 +6,7 @@
     <version>2.1-SNAPSHOT</version>
 
     <groupId>no.nb.googleday.mytracks</groupId>
-    <artifactId>mytracks</artifactId>
+    <artifactId>mytracks-old</artifactId>
 
     <properties>
         <appengine.target.version>1.9.6</appengine.target.version>
