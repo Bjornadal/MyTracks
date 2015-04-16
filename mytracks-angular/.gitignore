@@ -4,3 +4,4 @@ node_modules/
 target/
 .idea/
 .tmp/
+mytracks-angular.iml
